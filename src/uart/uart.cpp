@@ -4,32 +4,34 @@
 
 namespace uart
 {
-
   void init()
   {
     // TODO: Implement
-     UBRR0 = 0;
-    //UDR0
-    UCSR0C &= (0 << UMSEL00) & (0<<UMSEL01);
-    UCSR0C |= (1<< UPM00) | (1<< UPM01);
-    UCSR0A |= (1<<U2X0);
-    UBRR0L = 0b11001111; //set ubbr0l to 207 - ATMega hat frequenz 16Mhz - Baudrate dadurch 9600
-   
-    UCSR0B = (1<<RXEN0)|(1<<TXEN0);
-    UBRR0 = 9600;
-  }
+    // Baudrate
+    const uint16_t ubrr = 103;   // 9600 Baud  16 MHz
+    UBRR0H = (ubrr >> 8);
+    UBRR0L = ubrr;
 
+    // USART Control and Status Register A
+    UCSR0A = 0;
+
+    // Enable and TX
+    UCSR0B = (1 << TXEN0);
+
+    // Frame format: 8N1
+    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);  // 8 Bit
+  }
   void send(uint8_t data)
   {
     // TODO: Implement
-    while (!(UCSR0A & (1 << UDRE0))); // Wait for empty transmit buffer
-    UDR0 = data; // Put data into buffer, sends the data
+    /* Wait for empty transmit buffer */
+    while (!(UCSR0A & (1 << UDRE0)))
+      ;
+    /* Put data into buffer, sends the data */
+    UDR0 = data;
   }
-
   uint8_t receive()
   {
     // TODO: Implement
-    while (!(UCSR0A & (1 << RXC0))); // Wait for data to be received
-    return UDR0; // Get and return received data from buffer
   }
 }
