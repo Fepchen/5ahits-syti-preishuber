@@ -8,8 +8,10 @@ int main()
   while(1)
   {
     // examples:
-    // uart::send('a');
+    uart::send('a');
     // uint8_t data = uart::receive();
+    _delay_ms(200);
+    uart::send('b');
     _delay_ms(200);
   }
   return 0;
