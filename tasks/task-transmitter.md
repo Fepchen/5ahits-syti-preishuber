@@ -91,7 +91,7 @@ Erklärung, warum diese gewählt wurden: `___________________________`
 
 ## 5. Funktionstest
 Wurde das Byte beim Empfänger korrekt empfangen? `[ ]` Ja `[X]` Nein
-Tests mit verschiedenen Bytes durchgeführt? `[ ]` Ja `[X]` Nein
+Tests mit verschiedenen Bytes durchgeführt? `[X]` Ja `[ ]` Nein
 Probleme / Beobachtungen: `_Ich kann nicht beurteilen ob der Receiver nicht empfangen hat oder der Transmitter nichts gesendet hat, da das Messen nicht funktioniert hat_`
 
 ## 6. Erkenntnisse
