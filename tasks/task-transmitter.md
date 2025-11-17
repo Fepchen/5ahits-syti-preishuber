@@ -96,9 +96,15 @@ Probleme / Beobachtungen: `_Ich kann nicht beurteilen ob der Receiver nicht empf
 
 ## 6. Erkenntnisse
  - UART-Initialisierung erfolgt über Baudrate und UCSRx-Bits
- - TXEN0 und RXEN0 müssen aktiviert werden
+ - TXEN0 muss aktiviert werden
  - Standard-Config: 8 N 1 (8 Datenbits, kein Paritätsbit, 1 Stopbit)
 
 
 ## 7. Zusammenfassung
-(3–5 Sätze: Was habe ich technisch gelernt?)
+- UART auf ATmega2560 eingerichtet
+- Baudrate und Bits im Register gesetzt
+- Daten alle 200 ms gesendet ('a' und 'b')
+- TXEN0 aktiviert, RXEN0 noch nicht genutzt
+- Empfangen konnte nicht richtig getestet werden
+- 8N1 Standard, Senden klappt, Empfang unklar
+- grundlegendes Gefühl für UART bekommen
