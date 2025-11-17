@@ -14,8 +14,8 @@ Dokumentiere die Vorgehensweise sowie die Ergebnisse.
 
 
 ## 2. Kurzbeschreibung der eigenen Lösung
-Ich habe einen einfachen UART-Sender gemäß ATmega2560-Datenblatt implementiert.
-Der UART wird auf 9600 Baud bei 16 MHz Takt initialisiert.
+Ich hab einen einfachen UART-Sender gemäß ATmega2560-Datenblatt implementiert.
+UART wird auf 9600 Baud bei 16 MHz Takt initialisiert.
 Alle 200 ms werden die Zeichen 'a' und 'b' gesendet.
 
 
