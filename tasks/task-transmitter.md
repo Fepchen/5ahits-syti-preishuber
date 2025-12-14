@@ -1,6 +1,6 @@
 # UART Labor – Protokoll
 ```
-  Name: Webersberger Fabian______________
+  Name:Fabian W.______________
   Team: Mayr, Mühlberger_________________
   Datum: 2025-11-07______________________
 
